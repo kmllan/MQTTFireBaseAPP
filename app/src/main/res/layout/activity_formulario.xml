@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityFormulario">
+
+    <LinearLayout
+        android:layout_width="328dp"
+        android:layout_height="685dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="44dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Formulario de inscripcion de jugador"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+        <EditText
+            android:id="@+id/txtCodigoJugador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Codigo del jugador"
+            android:minHeight="48dp"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/txtNombreJugador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del jugador"
+            android:minHeight="48dp"/>
+
+
+        <Spinner
+            android:id="@+id/spPosicion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Posición"
+            android:minHeight="48dp"
+            />
+        <EditText
+            android:id="@+id/txtNumeroCamiseta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Numero de camiseta"
+            android:inputType="number"
+            android:minHeight="48dp"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="enviarDatosFirestore"
+            android:text="Enviar datos"/>
+
+        <Button
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="CargarLista"
+            android:text="Cargar datos"/>
+
+
+        <ListView
+            android:id="@+id/Lista"
+            android:layout_width="match_parent"
+            android:layout_height="199dp"/>
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
